@@ -13,9 +13,9 @@ setup(
     # the version across setup.py and the project code, see
     # http://packaging.python.org/en/latest/tutorial.html#version
     version="0.0.0",
-    url="https://github.com/pythontemplate",
-    author="Miroslav Jirik",
-    author_email="miroslav.jirik@gmail.com",
+    url="https://github.com/{{githublogin}}/pythontemplate",
+    author="{{name_and_surname}}",
+    author_email="{{email}}",
     license="MIT",
     # See https://pypi.python.org/pypi?%3Aaction=list_classifiers
     classifiers=[
@@ -31,13 +31,7 @@ setup(
         "License :: OSI Approved :: BSD License",
         # Specify the Python versions you support here. In particular, ensure
         # that you indicate whether you support Python 2, Python 3 or both.
-        # 'Programming Language :: Python :: 2',
-        # 'Programming Language :: Python :: 2.6',
-        # 'Programming Language :: Python :: 2.7',
         # 'Programming Language :: Python :: 3',
-        # 'Programming Language :: Python :: 3.2',
-        # 'Programming Language :: Python :: 3.3',
-        # 'Programming Language :: Python :: 3.4',
         "Programming Language :: Python :: 3.6",
     ],
     # What does your project relate to?
@@ -63,18 +57,6 @@ setup(
         # "*.h5"
         # ],
         # "sample2": ["scaffan/scaffan_icon256.png"],
-        # "segmentation_model_HCTFS": ["segmentation_model_HCTFS.pkl"],
-        # "segmentation_model_GLCMTFS": ["segmentation_model_GLCMTFS.pkl"],
-        # "segmentation_model_not_working": ["scaffan/segmentation_model.pkl"],
-        # "cnn_model": ["posenet_highLR.model"], # if it works the scaffan way is the right one
-        # "sni_area": ["SNI_area_regressor.joblib"],
-        # "segmentation_model_default_HCTFS": ["segmentation_model_default_HCTFS.pkl"],
-        # "segmentation_model_default_GLCMTFS": ["segmentation_model_default_GLCMTFS.pkl"],
-        # "segmentation_model_default_not_working": ["scaffan/segmentation_model_default.pkl"],
-        # "cnn_model_not_working": ["scaffan/posenet_highLR.model"],
-        # "sni_area_not_working": ["scaffan/SNI_area_regressor.joblib"],
-        # "sni_per-pixel": ["SNI_per-pixel_regressor.joblib"],
-        # "cnn_model_sni": ["v1.h5"] # now we are downloading model from github
         # "sni_per-pixel_not_working": ["scaffan/SNI_per-pixel_regressor.joblib"],
     },
     # Although 'package_data' is the preferred approach, in some case you may
