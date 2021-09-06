@@ -28,7 +28,7 @@ conda config --set anaconda_upload yes
    * `{{email}}` - Email used in project description
    
 
-## Increase version, build and upload
+## Increase version, build and upload to conda
 
 ```commandline
 git pull
@@ -36,5 +36,12 @@ bumpversion path .
 git push
 git push --tags
 conda build . -c conda-forge
+```
+
+## Build and upload to Pypi
+
+```commandline
+python setup.py sdist bdist_wheel
+twine check dist/*
 ```
     

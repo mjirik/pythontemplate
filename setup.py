@@ -2,10 +2,16 @@
 #    python setup.py register sdist upload
 # Always prefer setuptools over distutils
 from os import path
+import pathlib
 
 from setuptools import setup, find_packages
 
-here = path.abspath(path.dirname(__file__))
+# The directory containing this file
+HERE = pathlib.Path(__file__).parent
+
+# The text of the README file
+README = (HERE / "README.md").read_text()
+
 setup(
     name="pythontemplate",
     description="",
@@ -13,6 +19,8 @@ setup(
     # the version across setup.py and the project code, see
     # http://packaging.python.org/en/latest/tutorial.html#version
     version="0.0.0",
+    long_description=README,
+    long_description_content_type="text/markdown",
     url="https://github.com/{{githublogin}}/pythontemplate",
     author="{{name_and_surname}}",
     author_email="{{email}}",
@@ -28,7 +36,7 @@ setup(
         "Intended Audience :: Developers",
         "Topic :: Scientific/Engineering :: Bio-Informatics",
         # Pick your license as you wish (should match "license" above)
-        "License :: OSI Approved :: BSD License",
+        "License :: OSI Approved :: MIT License",
         # Specify the Python versions you support here. In particular, ensure
         # that you indicate whether you support Python 2, Python 3 or both.
         # 'Programming Language :: Python :: 3',
