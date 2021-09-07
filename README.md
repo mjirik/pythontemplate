@@ -27,21 +27,28 @@ conda config --set anaconda_upload yes
    * `{{githublogin}}` - Your login to github where is stored the repository
    * `{{email}}` - Email used in project description
    
+5) Final touch 
+   * Edit file `setup.py`
+   * Edit file `conda-recipe/meta.yaml`
 
-## Increase version, build and upload to conda
+## Increase version 
 
 ```commandline
 git pull
 bumpversion path .
 git push
 git push --tags
-conda build . -c conda-forge
 ```
 
-## Build and upload to Pypi
+## Build and upload to PyPI
 
 ```commandline
 python setup.py sdist bdist_wheel
 twine check dist/*
+twine upload dist/*
 ```
-    
+## Build and upload to conda
+
+```commandline
+conda build . -c conda-forge
+```
